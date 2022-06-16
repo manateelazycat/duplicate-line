@@ -90,7 +90,7 @@ By default, duplicate current line above.
 If mark is activate, duplicate region lines above.
 Default duplicate above, unless option REVERSE is non-nil."
   (interactive)
-  (let ((origianl-column (current-column))
+  (let ((original-column (current-column))
         duplicate-content)
     (if mark-active
         ;; If mark active.
@@ -125,7 +125,7 @@ Default duplicate above, unless option REVERSE is non-nil."
     (open-line 1)
     ;; Insert duplicate content and revert column.
     (insert duplicate-content)
-    (move-to-column origianl-column t)))
+    (move-to-column original-column t)))
 
 (defun duplicate-line-or-region-below ()
   "Duplicate current line or region below.
